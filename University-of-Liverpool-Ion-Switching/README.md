@@ -2,6 +2,21 @@
 About this Competition: https://www.kaggle.com/c/liverpool-ion-switching
 ## Repository contents
 * rapids-knn-as-features.ipynb == predicted result of rapids-knn which can be used as extra features
+* Ion-final.ipynb == final notebook for submission
+## Methods
+In this competition, I used a four-layer-model where each layer is a concatenated WaveNet-BiLSTM layer. The model structure is:
+
+<p align="middle">
+  <img src="img/Ion_Model_Structure.png" width="400"/>
+</p>
+
+Since the data for this competition is high frequency data, sampled in 10 kHz, WaveNet, a generative model for raw audio, seems to be very suitable for this data. The original Paper about WaveNet can be found [here](https://arxiv.org/pdf/1609.03499.pdf). The basic structure of WaveNet is: 
+
+<p align="middle">
+  <img src="img/WaveNet-1.png" width="400"/>
+  <img src="img/WaveNet-2.png" width="400"/>
+</p>
+
 ## Data loading
 1. Original competition data from kaggle
 ```
@@ -23,4 +38,9 @@ In rapids-knn-as-features.ipynb, I used RAPIDS-KNN to create additional features
 Thanks to [Sergey Bryansky](https://www.kaggle.com/sggpls/competitions), [this data](https://www.kaggle.com/sggpls/ion-shifted-rfc-proba) is the forcasted probability of train and test data using random forest classifier. This can be used as extra features.
 ```
   kaggle datasets download -d sggpls/ion-shifted-rfc-proba
+```
+5. Kalman cleaned data
+Thanks to [ragnar](https://www.kaggle.com/ragnar123), [this data](https://www.kaggle.com/ragnar123/clean-kalman) removed the noise in original signal.
+```
+kaggle datasets download -d ragnar123/clean-kalman
 ```
