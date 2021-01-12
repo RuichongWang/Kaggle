@@ -2,7 +2,9 @@
 About this Competition: https://www.kaggle.com/c/lish-moa
 ## Repository contents
 ## Methods
-In this competition, I used A, B and C as base model, then blend the predicted result of all three models as final submission. 
+* Highly Unbalanced Data: The data is highly unbalanced, so for each base model, I set 7 different seeds and blend 7 different models to have a robust result.
+* Dimension Reduction: 
+* Models: In this competition, I used A, B and C as base model, then blend the predicted result of all three models as final submission. 
 
 The model structure of multi head is:
 
