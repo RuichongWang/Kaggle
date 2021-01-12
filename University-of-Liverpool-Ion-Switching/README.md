@@ -42,5 +42,5 @@ Thanks to [Sergey Bryansky](https://www.kaggle.com/sggpls/competitions), [this d
 5. Kalman cleaned data
 Thanks to [ragnar](https://www.kaggle.com/ragnar123), [this data](https://www.kaggle.com/ragnar123/clean-kalman) removed the noise in original signal.
 ```
-kaggle datasets download -d ragnar123/clean-kalman
+  kaggle datasets download -d ragnar123/clean-kalman
 ```
