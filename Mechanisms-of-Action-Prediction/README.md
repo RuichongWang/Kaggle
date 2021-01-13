@@ -23,8 +23,8 @@ The model structure of multi-heads-ResNet is:
   <img src="img/Multi_head_simple.png" width="200"/>
 </p>
 
-<p href="https://github.com/RuichongWang/Kaggle/blob/main/Mechanisms-of-Action-Prediction/img/Multi_head.png" align="middle">
-  Structure in detail
+<p align="middle">
+  <a href="https://github.com/RuichongWang/Kaggle/blob/main/Mechanisms-of-Action-Prediction/img/Multi_head.png">Structure in detail</a>
 </p>
 
 ## Data loading
@@ -32,25 +32,15 @@ The model structure of multi-heads-ResNet is:
 ```
   mkdir input
   cd input
-  kaggle competitions download -c liverpool-ion-switching
+  kaggle competitions download -c lish-moa
 ```
-2. Data without drift
-As discussed in [this passage](https://www.kaggle.com/c/liverpool-ion-switching/discussion/133874), the original data is synthetic data with real life "electrophysiological" noise and synthetic drift added. [Chris Deotte](https://www.kaggle.com/cdeotte) created [this Data Set](https://www.kaggle.com/cdeotte/data-without-drift) which removed the drift and presented a cleaned data.
+2. Iterative stratification
+As introduced [here](https://github.com/trent-b/iterative-stratification), Iterative stratification is cross validator with stratification for multilabel data. 
 ```
-  kaggle datasets download -d cdeotte/data-without-drift
+  kaggle datasets download -d yasufuminakama/iterative-stratification
 ```
-3. RAPIDS
-In rapids-knn-as-features.ipynb, I used RAPIDS-KNN to create additional features, so RAPIDS is needed before running it.
+3. Pytorch tabnet
+This is an offline code competition, [ryati](https://www.kaggle.com/ryati131457) uploaded TabNet's installation package. 
 ```
-  kaggle datasets download -d cdeotte/rapids
-```
-4. Ion shifted rfc proba
-Thanks to [Sergey Bryansky](https://www.kaggle.com/sggpls/competitions), [this data](https://www.kaggle.com/sggpls/ion-shifted-rfc-proba) is the forcasted probability of train and test data using random forest classifier. This can be used as extra features.
-```
-  kaggle datasets download -d sggpls/ion-shifted-rfc-proba
-```
-5. Kalman cleaned data
-Thanks to [ragnar](https://www.kaggle.com/ragnar123), [this data](https://www.kaggle.com/ragnar123/clean-kalman) removed the noise in original signal.
-```
-  kaggle datasets download -d ragnar123/clean-kalman
+  kaggle datasets download -d ryati131457/pytorchtabnet
 ```
