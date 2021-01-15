@@ -6,6 +6,17 @@ About this Competition: https://www.kaggle.com/c/lish-moa
 * Dimension Reduction: PCA + Variance Threshold
 * Models: I used TabNet, multi-heads-ResNet and simple fully connected neural network as base models, then blended the result of all three models as final submission. 
 
+The model structure of multi-heads-ResNet is:
+
+<p align="middle">
+  <img src="img/Multi_head_simple.png" width="200"/>
+</p>
+
+<p align="middle">
+  <a href="https://github.com/RuichongWang/Kaggle/blob/main/Mechanisms-of-Action-Prediction/img/Multi_head.png">Structure in detail</a>
+</p>
+
+## TabNet
 This is a multi-label task, and our labels are protein targets' mechanism of action responses, which is reasonable to have some correlation from each other, so I didn't used LightGBM model which can't explore this relationship.
 
 TabNet outperforms or is on par with other tabular learning models on various datasets for classification and regression problems from different domains. It is a Tree-based learning that uses sequential attention to choose which features to reason from at each decision step.
@@ -17,15 +28,7 @@ Since the data for this competition has pretty much features, 870+ original feat
   <img src="img/tabnet2_architecture.png" height="400"/>
 </p>
 
-The model structure of multi-heads-ResNet is:
 
-<p align="middle">
-  <img src="img/Multi_head_simple.png" width="200"/>
-</p>
-
-<p align="middle">
-  <a href="https://github.com/RuichongWang/Kaggle/blob/main/Mechanisms-of-Action-Prediction/img/Multi_head.png">Structure in detail</a>
-</p>
 
 ## Data loading
 1. Original competition data from kaggle
