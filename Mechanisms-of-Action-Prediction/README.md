@@ -13,8 +13,8 @@ TabNet outperforms or is on par with other tabular learning models on various da
 Since the data for this competition has pretty much features, 870+ original features and 1500+ after feature engineering, TabNet seems to be very suitable for this data. The original Paper about TabNet can be found [here](https://arxiv.org/pdf/1908.07442.pdf). The basic structure of TabNet is: 
 
 <p align="middle">
-  <img src="img/tabnet_feature_selection.png" width="400"/>
-  <img src="img/tabnet2_architecture.png" width="400"/>
+  <img src="img/tabnet_feature_selection.png" height="400"/>
+  <img src="img/tabnet2_architecture.png" height="400"/>
 </p>
 
 The model structure of multi-heads-ResNet is:
