@@ -7,14 +7,14 @@ About this Competition: https://www.kaggle.com/c/liverpool-ion-switching
 In this competition, I used a four-layer-model where each layer is a concatenated WaveNet-BiLSTM layer. The model structure is:
 
 <p align="middle">
-  <img src="img/Ion_Model_Structure.png" width="400"/>
+  <img src="img/Ion_Model_Structure.png" heights="5"/>
 </p>
 
 Since the data for this competition is high frequency data, sampled in 10 kHz, WaveNet, a generative model for raw audio, seems to be very suitable for this data. The original Paper about WaveNet can be found [here](https://arxiv.org/pdf/1609.03499.pdf). The basic structure of WaveNet is: 
 
 <p align="middle">
-  <img src="img/WaveNet-1.png" width="400"/>
-  <img src="img/WaveNet-2.png" width="400"/>
+  <img src="img/WaveNet-1.png" heights="20"/>
+  <img src="img/WaveNet-2.png" heights="20"/>
 </p>
 
 ## Data loading
